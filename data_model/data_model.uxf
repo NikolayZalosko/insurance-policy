@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>744</x>
+      <y>324</y>
+      <w>288</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Person
+--
+-id: Long
+-full_name: String
+-address: String
+-passport_info: String
+-phone_number: String
+-email: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>636</x>
+      <y>192</y>
+      <w>336</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>InsuranceType
+--
+COLLISION_COVERAGE
+COMPREHENSIVE_COVERAGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>384</x>
+      <y>504</y>
+      <w>288</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>Vehicle
+--
+-id: Long
+-model: String
+-production_year: Integer
+-VIN: String
+-register_sign: String
+-category: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>216</x>
+      <y>180</y>
+      <w>288</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>InsurancePolicy
+--
+-id: Long
+-type: Enum[InsuranceType]
+-insurant: Person
+-start_date: Date
+-end_date: Date
+-vehicle: Vehicle
+-sign_date: Date</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>204</y>
+      <w>168</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>120.0;10.0;50.0;10.0;50.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>264</y>
+      <w>276</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+m2=0..n</panel_attributes>
+    <additional_attributes>210.0;70.0;80.0;70.0;80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>492</x>
+      <y>336</y>
+      <w>132</w>
+      <h>192</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..1
+m2=0..n</panel_attributes>
+    <additional_attributes>60.0;140.0;60.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
